@@ -4,7 +4,7 @@ public struct FindRequest {
     public var skip: Int?
     public var limit: Int?
     public var sortDescriptors: [NSSortDescriptor]?
-    public var predicates: [NSPredicate]
+    public var predicate: NSPredicate
 }
 
 public protocol AbstractRepository {
