@@ -5,6 +5,11 @@ public struct FindRequest {
     public var limit: Int?
     public var sortDescriptors: [NSSortDescriptor]?
     public var predicate: NSPredicate
+
+    public init(predicate: NSPredicate = .init(value: true), sortDescriptors: [NSSortDescriptor]?=nil, limit: Int?=nil, skip: Int?=nil) {
+        self.predicate = predicate
+    }
+
 }
 
 public protocol AbstractRepository {
