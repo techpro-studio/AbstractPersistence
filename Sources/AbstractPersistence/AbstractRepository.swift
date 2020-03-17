@@ -1,10 +1,10 @@
 import Foundation
 
 public struct FindRequest {
-    var skip: Int?
-    var limit: Int?
-    var sortDescriptors: [NSSortDescriptor]?
-    var predicates: [NSPredicate]
+    public var skip: Int?
+    public var limit: Int?
+    public var sortDescriptors: [NSSortDescriptor]?
+    public var predicates: [NSPredicate]
 }
 
 public protocol AbstractRepository {
