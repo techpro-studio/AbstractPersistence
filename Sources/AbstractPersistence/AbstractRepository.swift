@@ -8,6 +8,9 @@ public struct FindRequest {
 
     public init(predicate: NSPredicate = .init(value: true), sortDescriptors: [NSSortDescriptor]?=nil, limit: Int?=nil, skip: Int?=nil) {
         self.predicate = predicate
+        self.skip = skip
+        self.limit = limit
+        self.sortDescriptors = sortDescriptors
     }
 
 }
