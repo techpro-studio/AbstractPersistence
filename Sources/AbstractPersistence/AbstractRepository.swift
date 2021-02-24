@@ -18,14 +18,14 @@ public struct FindRequest {
 public protocol AbstractRepository {
 
     associatedtype T: Identifiable
-    func insert(value: T)
-    func insertMany(value: [T])
-    func save(value: T)
-    func saveMany(value: [T])
-    func remove(value: T)
+    func insert(value: T) throws
+    func insertMany(value: [T]) throws
+    func save(value: T) throws
+    func saveMany(value: [T]) throws
+    func remove(value: T) throws
+    func remove(id: T.Identifier) throws
     func find(request: FindRequest) -> [T]
     func getById(id: T.Identifier) -> T?
-    func remove(id: T.Identifier)
     func get(predicate: NSPredicate) -> T?
     
 }
